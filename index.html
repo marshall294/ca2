@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orli International Academy Computer Assessment</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+      color: white;
+    }
+
+    header {
+      background-color: rgba(0, 51, 102, 0.8);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2.5em;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+      margin-top: 80px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .form-container {
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFgpFL8wdvvDTKmHLBV2n6jvlLG6nN0XSlS0jTlx1cvR8JqIMB_FCFrj5oLJPn7aLaR2k&usqp=CAU');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      margin-top: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 800px;
+      border: none;
+    }
+
+    .footer {
+      background-color: rgba(0, 51, 102, 0.8);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 50px;
+    }
+
+    #countdown {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 2em;
+      color: green;
+      text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      z-index: 9999;
+    }
+
+    #current-time {
+      position: absolute;
+      top: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 1.2em;
+      color: white;
+      font-family: 'Roboto', sans-serif;
+      z-index: 9999;
+    }
+
+    #school-logo {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      z-index: 9999;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        font-size: 2em;
+      }
+      .container {
+        padding: 10px;
+      }
+      iframe {
+        height: 600px;
+      }
+      #countdown {
+        top: 120px;
+        font-size: 1.5em;
+      }
+      #current-time {
+        top: 200px;
+        font-size: 1em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        font-size: 1.8em;
+      }
+      iframe {
+        height: 500px;
+      }
+      #countdown {
+        top: 140px;
+        font-size: 1.2em;
+      }
+      #current-time {
+        top: 220px;
+        font-size: 0.9em;
+      }
+    }
+
+    /* Message Styles */
+    .message {
+      display: none;
+      text-align: center;
+      font-size: 2em;
+      color: #333;
+      padding: 50px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 3s ease-out forwards;
+    }
+
+    .message p {
+      font-size: 1.5em;
+      margin: 20px;
+    }
+
+    .message span {
+      font-weight: bold;
+      color: #0066cc;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.5);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img id="school-logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuR3d8sZw9Kn0Fiij_0R8diJ-KnOFB8Zw60-0ygbY4ymSmrKb2BthQKCJU4X9saTgNVy8&usqp=CAU" alt="Orli International Academy Logo">
+
+  <div id="current-time"></div>
+
+  <div id="countdown"></div>
+
+  <header>
+    Orli International Academy
+  </header>
+
+  <div class="container">
+    <h2 style="text-align: center; color: #333;">Year 2 Computer Assessment</h2>
+    <p style="text-align: center; color: #666;">Please fill out the assessment below. Ensure you complete it before the deadline.</p>
+
+    <div class="form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeE9BKJDSpLYkGKbPZworI-vw3w-gOAjJss6CiLjgKw6euDQg/viewform"></iframe>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Orli International Academy &copy; 2024</p>
+  </div>
+
+  <div class="message" id="assessment-over">
+    <p>Today's assessment is over. Study for more assessments. If you have questions, contact your class teacher.</p>
+    <p><span>Orli International Academy</span> - Raising a well-informed child.</p>
+  </div>
+
+  <script>
+    function updateTime() {
+      const currentTimeElement = document.getElementById('current-time');
+      const currentDate = new Date();
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+      currentTimeElement.innerHTML = currentDate.toLocaleString('en-US', options);
+    }
+
+    function startCountdown() {
+      const countdownElement = document.getElementById('countdown');
+      const assessmentOverMessage = document.getElementById('assessment-over');
+
+      function updateCountdown() {
+        const now = new Date();
+        const startTime = new Date();
+        startTime.setHours(8, 0, 0, 0); 
+        const stopTime = new Date();
+        stopTime.setHours(13, 0, 0, 0); 
+
+        let remainingTime = 0;
+        
+        if (now < startTime) {
+          remainingTime = startTime - now;
+        } else if (now >= startTime && now < stopTime) {
+          remainingTime = stopTime - now;
+        } else {
+          countdownElement.innerHTML = "Timer has stopped for the day!";
+          assessmentOverMessage.style.display = 'block';
+          return;
+        }
+
+        const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+        const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+        countdownElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+    }
+
+    startCountdown();
+  </script>
+
+</body>
+</html>
